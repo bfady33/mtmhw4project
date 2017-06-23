@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoom.c
+EscapeRoom.h
+C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoom.h
+stdlib.h
+-
+string.h
+-
+
+C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoom.h
+stdbool.h
+-
+

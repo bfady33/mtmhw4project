@@ -1,0 +1,3 @@
+C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/CMakeFiles/hw4project.dir
+C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
