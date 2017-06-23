@@ -5,11 +5,14 @@
 #include "../EscapeRoomWrapper.h"
 #include "../mtmtest.h"
 
-void createTest();
-
 using mtm::escaperoom::EscapeRoomWrapper;
+
+void createTest();
+void operatorstest();
+
 int escapeRoomWrapperTest(){
     createTest();
+    operatorstest();
     return 0;
 }
 
@@ -18,3 +21,6 @@ void createTest(){
     return;
 }
 
+void operatorstest(){
+    return;
+}

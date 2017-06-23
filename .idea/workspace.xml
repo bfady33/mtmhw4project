@@ -60,8 +60,8 @@
       <file leaf-file-name="EscapeRoomWrapper_test.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/EscapeRoomWrapper_test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="408">
+              <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
               <folding>
                 <element signature="e#39#58#0" expanded="true" />
               </folding>
@@ -144,8 +144,8 @@
         <option value="$PROJECT_DIR$/EscapeRoomWrapper.h" />
         <option value="$PROJECT_DIR$/EscapeRoomWrapper.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/tests/EscapeRoomWrapper_test.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/tests/EscapeRoomWrapper_test.cpp" />
       </list>
     </option>
   </component>
@@ -450,12 +450,12 @@
       <option name="presentableId" value="Default" />
       <updated>1498036502893</updated>
       <workItem from="1498036504597" duration="3548000" />
-      <workItem from="1498063071672" duration="10258000" />
+      <workItem from="1498063071672" duration="10915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13806000" />
+    <option name="totallyTimeSpent" value="14463000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -671,8 +671,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/EscapeRoomWrapper_test.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="408">
+          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
           <folding>
             <element signature="e#39#58#0" expanded="true" />
           </folding>
