@@ -103,10 +103,16 @@
 		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/Exceptions.cpp">
 			<Option target="hw4project"/>
 		</Unit>
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/Exceptions.h">
+			<Option target="hw4project"/>
+		</Unit>
 		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/main.cpp">
 			<Option target="hw4project"/>
 		</Unit>
 		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/mtmtest.h">
+			<Option target="hw4project"/>
+		</Unit>
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/tests/EscapeRoomWrapper_test.cpp">
 			<Option target="hw4project"/>
 		</Unit>
 		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/CMakeLists.txt">

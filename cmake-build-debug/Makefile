@@ -257,6 +257,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+tests/EscapeRoomWrapper_test.obj: tests/EscapeRoomWrapper_test.cpp.obj
+
+.PHONY : tests/EscapeRoomWrapper_test.obj
+
+# target to build an object file
+tests/EscapeRoomWrapper_test.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.obj
+.PHONY : tests/EscapeRoomWrapper_test.cpp.obj
+
+tests/EscapeRoomWrapper_test.i: tests/EscapeRoomWrapper_test.cpp.i
+
+.PHONY : tests/EscapeRoomWrapper_test.i
+
+# target to preprocess a source file
+tests/EscapeRoomWrapper_test.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.i
+.PHONY : tests/EscapeRoomWrapper_test.cpp.i
+
+tests/EscapeRoomWrapper_test.s: tests/EscapeRoomWrapper_test.cpp.s
+
+.PHONY : tests/EscapeRoomWrapper_test.s
+
+# target to generate assembly for a file
+tests/EscapeRoomWrapper_test.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.s
+.PHONY : tests/EscapeRoomWrapper_test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -281,6 +308,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tests/EscapeRoomWrapper_test.obj
+	@echo ... tests/EscapeRoomWrapper_test.i
+	@echo ... tests/EscapeRoomWrapper_test.s
 .PHONY : help
 
 

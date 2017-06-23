@@ -32,6 +32,10 @@ mtm::escaperoom::EscapeRoomWrapper::EscapeRoomWrapper(const EscapeRoomWrapper &r
     }
 }
 
+mtm::escaperoom::EscapeRoomWrapper::~EscapeRoomWrapper() {
+    escapeRoomDestroy(this->room);
+}
+
 int mtm::escaperoom::EscapeRoomWrapper::getMaxParticipants() const {
     return roomGetMaxParticipants(this->room);
 }
@@ -52,8 +56,25 @@ double mtm::escaperoom::EscapeRoomWrapper::getRate() const {
     return roomGetRate(this->room);
 }
 
+void mtm::escaperoom::EscapeRoomWrapper::rate(const int& newRate) const{
+    updateRate(this->room , newRate);
+}
+
 bool mtm::escaperoom::EscapeRoomWrapper::operator==(const EscapeRoomWrapper &room) const {
     return areEqualRooms(room.room , this->room);
+}
+
+mtm::escaperoom::EscapeRoomWrapper& mtm::escaperoom::EscapeRoomWrapper::operator=(const EscapeRoomWrapper& room){
+    if(&room == this){
+        return *this;
+    }
+    escapeRoomDestroy(this->room);
+    this->room = escapeRoomCopy(room.room);
+    if(this->room == NULL){
+        EscapeRoomMemoryProblemException exc;
+        throw exc;
+    }
+    return *this;
 }
 
 bool mtm::escaperoom::EscapeRoomWrapper::operator!=(const EscapeRoomWrapper &room) const {
@@ -69,5 +90,7 @@ bool mtm::escaperoom::EscapeRoomWrapper::operator>(const EscapeRoomWrapper &room
 }
 
 std::ostream& operator<<(std::ostream &output, const mtm::escaperoom::EscapeRoomWrapper &room) {
-    return output<<""<<"";
+    output << room.getName()  << "(" << room.getMaxTime() << "/" << room.level() << "/" <<
+           room.getMaxParticipants()<< "/" ;
+    return output;
 }
