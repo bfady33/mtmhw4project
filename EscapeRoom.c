@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+//escape room
+
 struct escaperoom_t{
     char* name;
     int maxTime;

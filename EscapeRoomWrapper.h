@@ -11,6 +11,7 @@ namespace escaperoom {
 
     class EscapeRoomWrapper{
     private:
+        //add a room
         EscapeRoom  room;
     public:
         // Constructs a new Escape Room with the specified data.

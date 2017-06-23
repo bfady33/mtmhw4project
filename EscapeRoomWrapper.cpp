@@ -7,6 +7,8 @@
 #define DEFAULT_TIME 60
 #define DEFAULT_PARTICIPANTS 6
 
+//the functions of EscapeRoomWrapper
+
 mtm::escaperoom::EscapeRoomWrapper::EscapeRoomWrapper(char* name, const int& escapeTime, const int& level,
                                                       const int& maxParticipants){
     room = escapeRoomCreate(name , escapeTime, maxParticipants , level);

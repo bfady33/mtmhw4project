@@ -17,6 +17,7 @@ namespace escaperoom{
     } Difficulty;
 
     class Enigma{
+    //maybe add some fields
     public:
 
         // Constructs a new Enigma with the specified data.

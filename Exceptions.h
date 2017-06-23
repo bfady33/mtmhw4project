@@ -3,6 +3,7 @@
 
 #include <stdexcept>
 
+//Exceptions
 namespace mtm {
 
     class MtmException {};

@@ -3,7 +3,7 @@
 #ifndef ESCAPEROOM_H
 #define ESCAPEROOM_H
 
-
+//escape room
 typedef struct escaperoom_t* EscapeRoom;
 
 typedef enum{

@@ -3,3 +3,5 @@
 //
 
 #include "Enigma.h"
+
+//the functions of Enigma
