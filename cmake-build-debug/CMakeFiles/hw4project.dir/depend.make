@@ -12,8 +12,6 @@ CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../EscapeRoomWrapper.cpp
 CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../EscapeRoomWrapper.h
 CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../Exceptions.h
 
-CMakeFiles/hw4project.dir/Exceptions.cpp.obj: ../Exceptions.cpp
-
 CMakeFiles/hw4project.dir/main.cpp.obj: ../main.cpp
 
 CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.obj: ../EscapeRoom.h

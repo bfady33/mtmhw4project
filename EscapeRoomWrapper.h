@@ -76,6 +76,8 @@ namespace escaperoom {
         // @param room : the room whose data is printed.
         friend std::ostream& operator<<(std::ostream& output, const EscapeRoomWrapper& room);
 
+        //std::ostream&operator<<(std::ostream& output) const = delete ;
+
         //Function returns the name of the EscapeRoom.
         //
         std::string getName() const;

@@ -91,8 +91,13 @@ bool mtm::escaperoom::EscapeRoomWrapper::operator>(const EscapeRoomWrapper &room
     return isBiggerRoom(this->room, room.room);
 }
 
-std::ostream& operator<<(std::ostream &output, const mtm::escaperoom::EscapeRoomWrapper &room) {
-    output << room.getName()  << "(" << room.getMaxTime() << "/" << room.level() << "/" <<
-           room.getMaxParticipants()<< "/" ;
-    return output;
+namespace mtm {
+    namespace escaperoom{
+    std::ostream &operator<<(std::ostream &output, const mtm::escaperoom::EscapeRoomWrapper &room) {
+        output << room.getName() << "(" << room.getMaxTime() << "/" << room.level() << "/" <<
+               room.getMaxParticipants() << ")";
+        return output;
+    }
+
+}
 }
