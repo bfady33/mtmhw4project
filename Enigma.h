@@ -17,7 +17,11 @@ namespace escaperoom{
     } Difficulty;
 
     class Enigma{
-    //maybe add some fields
+
+        string name;
+        Difficulty difficulty;
+        unsigned int num_of_elements;
+
     public:
 
         // Constructs a new Enigma with the specified data.
@@ -26,7 +30,6 @@ namespace escaperoom{
         // @param difficulty : the difficulty of the enigma.
         // @param numOfElements : the number of elements in the enigma.
         Enigma(const std::string& name, const Difficulty& difficulty, const int& numOfElements);
-
 
         //copy constructor
         //
