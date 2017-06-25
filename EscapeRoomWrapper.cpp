@@ -98,6 +98,5 @@ namespace mtm {
                room.getMaxParticipants() << ")";
         return output;
     }
-
 }
 }

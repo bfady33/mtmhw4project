@@ -53,6 +53,7 @@ void getValTest(){
     char name2[] = "room2";
     char name3[] = "room3";
     char name4[] = "room4";
+     
     EscapeRoomWrapper e1(name1 , 50 , 8 , 4);
     EscapeRoomWrapper e2(name2 , 4);
     EscapeRoomWrapper e3(name3 , 20 , 1 , 2);
