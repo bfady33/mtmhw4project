@@ -100,6 +100,9 @@
 		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoomWrapper.h">
 			<Option target="hw4project"/>
 		</Unit>
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/list.h">
+			<Option target="hw4project"/>
+		</Unit>
 		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/main.cpp">
 			<Option target="hw4project"/>
 		</Unit>
