@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Fady\OneDrive\HW4\hw4project
+CMAKE_SOURCE_DIR = C:\Users\Or\Documents\GitHub\mtmhw4project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug\CMakeFiles C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -230,6 +230,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+tests/Enigma_test.obj: tests/Enigma_test.cpp.obj
+
+.PHONY : tests/Enigma_test.obj
+
+# target to build an object file
+tests/Enigma_test.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/tests/Enigma_test.cpp.obj
+.PHONY : tests/Enigma_test.cpp.obj
+
+tests/Enigma_test.i: tests/Enigma_test.cpp.i
+
+.PHONY : tests/Enigma_test.i
+
+# target to preprocess a source file
+tests/Enigma_test.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/tests/Enigma_test.cpp.i
+.PHONY : tests/Enigma_test.cpp.i
+
+tests/Enigma_test.s: tests/Enigma_test.cpp.s
+
+.PHONY : tests/Enigma_test.s
+
+# target to generate assembly for a file
+tests/Enigma_test.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/tests/Enigma_test.cpp.s
+.PHONY : tests/Enigma_test.cpp.s
+
 tests/EscapeRoomWrapper_test.obj: tests/EscapeRoomWrapper_test.cpp.obj
 
 .PHONY : tests/EscapeRoomWrapper_test.obj
@@ -278,6 +305,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tests/Enigma_test.obj
+	@echo ... tests/Enigma_test.i
+	@echo ... tests/Enigma_test.s
 	@echo ... tests/EscapeRoomWrapper_test.obj
 	@echo ... tests/EscapeRoomWrapper_test.i
 	@echo ... tests/EscapeRoomWrapper_test.s

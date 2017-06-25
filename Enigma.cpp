@@ -28,7 +28,7 @@ bool mtm::escaperoom::Enigma::areEqualyComplex(const Enigma& enigma) const {
     return (this->difficulty == enigma.difficulty) && (this->num_of_elements == enigma.num_of_elements);
 }
 
-Difficulty mtm::escaperoom::Enigma::getDifficulty() const {
+mtm::escaperoom::Difficulty mtm::escaperoom::Enigma::getDifficulty() const {
     return difficulty;
 }
 
@@ -36,6 +36,10 @@ string mtm::escaperoom::Enigma::getName() const {
     return name;
 }
 
-friend std::ostream& mtm::escaperoom::operator<<(std::ostream& output, const Enigma& enigma) {
-    return output << enigma.name << " (" << enigma.difficulty << ") " << enigma.num_of_elements;
+namespace mtm{
+    namespace escaperoom {
+        std::ostream &operator<<(std::ostream &output, const Enigma &enigma) {
+            return output << enigma.name << " (" << enigma.difficulty << ") " << enigma.num_of_elements;
+        }
+    }
 }
