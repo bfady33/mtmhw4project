@@ -12,7 +12,7 @@ void test1();
 void test2();
 void test3();
 
-int EnigmaTest(){
+int EnigmaTest() {
     RUN_TEST(test1);
     RUN_TEST(test2);
     RUN_TEST(test3);

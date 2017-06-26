@@ -23,3 +23,9 @@ CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.obj: ../EscapeRoomWra
 CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.obj: ../mtmtest.h
 CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.obj: ../tests/EscapeRoomWrapper_test.cpp
 
+CMakeFiles/hw4project.dir/tests/list_test.cpp.obj: ../Exceptions.h
+CMakeFiles/hw4project.dir/tests/list_test.cpp.obj: ../Node.h
+CMakeFiles/hw4project.dir/tests/list_test.cpp.obj: ../list.h
+CMakeFiles/hw4project.dir/tests/list_test.cpp.obj: ../mtmtest.h
+CMakeFiles/hw4project.dir/tests/list_test.cpp.obj: ../tests/list_test.cpp
+
