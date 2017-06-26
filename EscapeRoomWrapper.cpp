@@ -91,6 +91,45 @@ bool mtm::escaperoom::EscapeRoomWrapper::operator>(const EscapeRoomWrapper &room
     return isBiggerRoom(this->room, room.room);
 }
 
+void mtm::escaperoom::EscapeRoomWrapper::addEnigma(const Enigma& enigma){
+    this->enigmas.insert(this->enigmas.end() , enigma);
+}
+
+void mtm::escaperoom::EscapeRoomWrapper::removeEnigma(const Enigma& enigma){
+    if(this->enigmas.size() == 0){
+        EscapeRoomNoEnigmasException exc;
+        throw exc;
+    }
+
+    for(int i = 0 ; i < this->enigmas.size() ; i++){
+        if(this->enigmas[i].getName() == enigma.getName()){
+            this->enigmas.erase(this->enigmas.begin() + i);
+            return;
+        }
+    }
+    EscapeRoomEnigmaNotFoundException exc;
+    throw exc;
+}
+
+mtm::escaperoom::Enigma mtm::escaperoom::EscapeRoomWrapper::getHardestEnigma(){
+    if(this->enigmas.size() == 0){
+        EscapeRoomNoEnigmasException exc;
+        throw exc;
+    }
+    Enigma mostDiffE = this->enigmas[0];
+    mtm::escaperoom::Difficulty currMaxDiff = mtm::escaperoom::EASY_ENIGMA;
+    for(int i = 0 ; i < this->enigmas.size() ; i++){
+        if(this->enigmas[i].getDifficulty() > currMaxDiff)
+            mostDiffE = this->enigmas[i];
+    }
+
+    return mostDiffE;
+}
+
+std::vector<mtm::escaperoom::Enigma>& mtm::escaperoom::EscapeRoomWrapper::getAllEnigmas(){
+    return  this->enigmas;
+}
+
 namespace mtm {
     namespace escaperoom{
     std::ostream &operator<<(std::ostream &output, const mtm::escaperoom::EscapeRoomWrapper &room) {

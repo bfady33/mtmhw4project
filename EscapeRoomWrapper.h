@@ -97,6 +97,17 @@ namespace escaperoom {
         //
         int getMaxParticipants() const;
 
+        //adds enigma to the end of the enigmas list
+        void addEnigma(const Enigma& enigma);
+
+        //removes the from the list enigmas the value enigma
+        void removeEnigma(const Enigma& enigma);
+
+        //returns the hardest Enigma in Enigmas
+        Enigma getHardestEnigma();
+
+        //returns the vector of all Enigmas in the room
+        std::vector<Enigma>& getAllEnigmas();
     };
 
     std::ostream& operator<<(std::ostream& output, const EscapeRoomWrapper& room);
