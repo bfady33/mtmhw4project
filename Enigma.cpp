@@ -3,9 +3,26 @@
 //
 
 #include "Enigma.h"
+#include "Exceptions.h"
 
-mtm::escaperoom::Enigma::Enigma(const std::string &name, const Difficulty &difficulty, const int &numOfElements) :
-    name(name), difficulty(difficulty), num_of_elements(numOfElements){
+//using std::string;
+
+mtm::escaperoom::Enigma::Enigma(const std::string& name, const Difficulty& difficulty, const int& numOfElements ,
+                                const set<string> &elements){
+    if(elements.size() == numOfElements){
+        EnigmaIllegalSizeParamException exc;
+        throw exc;
+    }
+    this->name = name;
+    this->difficulty = difficulty;
+    this->num_of_elements = numOfElements;
+    this->elements = elements;
+}
+
+mtm::escaperoom::Enigma::Enigma(const std::string& name, const Difficulty& difficulty){
+    this->name = name;
+    this->difficulty = difficulty;
+    this->num_of_elements = 0;
 }
 
 bool mtm::escaperoom::Enigma::operator==(const Enigma &enigma) const {
@@ -30,6 +47,24 @@ bool mtm::escaperoom::Enigma::areEqualyComplex(const Enigma& enigma) const {
 
 mtm::escaperoom::Difficulty mtm::escaperoom::Enigma::getDifficulty() const {
     return difficulty;
+}
+
+void mtm::escaperoom::Enigma::addElement(const string& element){
+    this->elements.insert(element);
+}
+
+void mtm::escaperoom::Enigma::removeElement(const string& element){
+    if(this->elements.size() == 0){
+        EnigmaNoElementsException exc;
+        throw exc;
+    }
+    try{
+        this->elements.erase(element);
+    }
+    catch(const std::exception &e){
+        EnigmaElementNotFundException exc;
+        throw exc;
+    }
 }
 
 string mtm::escaperoom::Enigma::getName() const {

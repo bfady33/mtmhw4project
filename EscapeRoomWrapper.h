@@ -3,8 +3,9 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 #include "EscapeRoom.h"
-
+#include "Enigma.h"
 
 namespace mtm{
 namespace escaperoom {
@@ -13,6 +14,8 @@ namespace escaperoom {
     private:
         //add a room
         EscapeRoom  room;
+
+        std::vector<Enigma> enigmas;
     public:
         // Constructs a new Escape Room with the specified data.
         //
