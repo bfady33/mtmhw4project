@@ -6,7 +6,9 @@ CMakeFiles/hw4project.dir/EscapeRoom.c.obj: ../EscapeRoom.h
 
 CMakeFiles/hw4project.dir/Enigma.cpp.obj: ../Enigma.cpp
 CMakeFiles/hw4project.dir/Enigma.cpp.obj: ../Enigma.h
+CMakeFiles/hw4project.dir/Enigma.cpp.obj: ../Exceptions.h
 
+CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../Enigma.h
 CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../EscapeRoom.h
 CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../EscapeRoomWrapper.cpp
 CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../EscapeRoomWrapper.h
@@ -15,9 +17,11 @@ CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../Exceptions.h
 CMakeFiles/hw4project.dir/main.cpp.obj: ../main.cpp
 
 CMakeFiles/hw4project.dir/tests/Enigma_test.cpp.obj: ../Enigma.h
+CMakeFiles/hw4project.dir/tests/Enigma_test.cpp.obj: ../Exceptions.h
 CMakeFiles/hw4project.dir/tests/Enigma_test.cpp.obj: ../mtmtest.h
 CMakeFiles/hw4project.dir/tests/Enigma_test.cpp.obj: ../tests/Enigma_test.cpp
 
+CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.obj: ../Enigma.h
 CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.obj: ../EscapeRoom.h
 CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.obj: ../EscapeRoomWrapper.h
 CMakeFiles/hw4project.dir/tests/EscapeRoomWrapper_test.cpp.obj: ../mtmtest.h

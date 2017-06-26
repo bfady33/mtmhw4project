@@ -9,48 +9,34 @@
 
 using mtm::escaperoom::Enigma;
 
-void test1();
-void test2();
-void test3();
+void Etest1();
+void Etest2();
+void Etest3();
 
 int EnigmaTest() {
-    RUN_TEST(test1);
-    RUN_TEST(test2);
-    RUN_TEST(test3);
+    RUN_TEST(Etest1);
+    RUN_TEST(Etest2);
+    RUN_TEST(Etest3);
 }
 
 //test Enigma's constructors.
-void test1(){
+void Etest1(){
     set<string> elements1;
     elements1.insert("a tool");
 
     set<string> elements2;
-    elements1.insert("a thing");
+    elements2.insert("a thing");
 
     Enigma enigma1("enigma1", mtm::escaperoom::MEDIUM_ENIGMA, 1 , elements1);
     ASSERT_EQUALS(mtm::escaperoom::MEDIUM_ENIGMA, enigma1.getDifficulty());
     ASSERT_EQUALS(enigma1.getName(), (string)"enigma1");
 
-    int flag = 0;
-    try{
-        Enigma enigma5("enigma5", mtm::escaperoom::MEDIUM_ENIGMA, 2 , elements2);
-    }
-    catch(const mtm::escaperoom::EnigmaIllegalSizeParamException &e){
-        flag =1;
-    }
-    ASSERT_EQUALS(flag, 1);
+
+    ASSERT_THROWS(mtm::escaperoom::EnigmaIllegalSizeParamException ,
+                  Enigma("enigma5", mtm::escaperoom::MEDIUM_ENIGMA, 2 , elements2));
 
     Enigma enigma2("", mtm::escaperoom::HARD_ENIGMA);
     ASSERT_EQUALS(enigma2.getName(), (string)"");
-    flag =0;
-    try{
-        enigma2.removeElement("element");
-    }
-    catch (mtm::escaperoom::EnigmaNoElementsException){
-        flag = 1;
-    }
-    ASSERT_EQUALS(flag, 1);
-
     Enigma copy1 = enigma1;
     ASSERT_EQUALS(copy1.getName(), (string)"enigma1");
     ASSERT_EQUALS(mtm::escaperoom::MEDIUM_ENIGMA, copy1.getDifficulty());
@@ -59,7 +45,7 @@ void test1(){
 }
 
 //test Enigma's comparisions.
-void test2(){
+void Etest2(){
     set<string> elements1;
     elements1.insert("a tool");
 
@@ -70,24 +56,30 @@ void test2(){
     elements3.insert("paper");
     elements3.insert("phone");
 
-    Enigma enigma1("enigma1", mtm::escaperoom::MEDIUM_ENIGMA, 3);
-    Enigma enigma2("enigma1", mtm::escaperoom::MEDIUM_ENIGMA, 5);
-    Enigma enigma3("enigma3", mtm::escaperoom::MEDIUM_ENIGMA, 3);
-    Enigma enigma4("enigma4", mtm::escaperoom::EASY_ENIGMA, 3);
+    Enigma enigma1("enigma1", mtm::escaperoom::MEDIUM_ENIGMA, 1 , elements1);
+    Enigma enigma2("enigma1", mtm::escaperoom::MEDIUM_ENIGMA, 1 , elements2);
+    Enigma enigma3("enigma3", mtm::escaperoom::MEDIUM_ENIGMA, 2 , elements3);
+    Enigma enigma4("enigma4", mtm::escaperoom::EASY_ENIGMA, 1 , elements1);
     ASSERT_TRUE(enigma1 == enigma2);
     ASSERT_FALSE(enigma1 != enigma2);
     ASSERT_FALSE(enigma1 == enigma3);
     ASSERT_TRUE(enigma4 < enigma1);
     ASSERT_FALSE(enigma1 < enigma2);
-    ASSERT_TRUE(enigma1.areEqualyComplex(enigma3));
-    ASSERT_FALSE(enigma1.areEqualyComplex(enigma2));
+    ASSERT_TRUE(enigma1.areEqualyComplex(enigma2));
+    ASSERT_FALSE(enigma1.areEqualyComplex(enigma3));
     ASSERT_FALSE(enigma1.areEqualyComplex(enigma4));
 }
 
 
 //test Enigma's get methods.
-void test3(){
-    Enigma enigma1("enigma1", mtm::escaperoom::MEDIUM_ENIGMA, 3);
+void Etest3(){
+    set<string> elements1;
+    elements1.insert("a tool");
+
+    Enigma enigma1("enigma1", mtm::escaperoom::MEDIUM_ENIGMA, 1 , elements1);
     ASSERT_EQUALS("enigma1", enigma1.getName());
     ASSERT_EQUALS(mtm::escaperoom::MEDIUM_ENIGMA, enigma1.getDifficulty());
+    enigma1.addElement("additional tool");
+    enigma1.removeElement("additional tool");
+    ASSERT_THROWS(mtm::escaperoom::EnigmaElementNotFundException , enigma1.removeElement("blabla"));
 }

@@ -9,7 +9,7 @@
 
 mtm::escaperoom::Enigma::Enigma(const std::string& name, const Difficulty& difficulty, const int& numOfElements ,
                                 const set<string> &elements){
-    if(elements.size() == numOfElements){
+    if(elements.size() != numOfElements){
         EnigmaIllegalSizeParamException exc;
         throw exc;
     }
@@ -58,13 +58,12 @@ void mtm::escaperoom::Enigma::removeElement(const string& element){
         EnigmaNoElementsException exc;
         throw exc;
     }
-    try{
-        this->elements.erase(element);
-    }
-    catch(const std::exception &e){
-        EnigmaElementNotFundException exc;
+    if(this->elements.find(element) == this->elements.end())
+    {
+        mtm::escaperoom::EnigmaElementNotFundException exc;
         throw exc;
     }
+    this->elements.erase(element);
 }
 
 string mtm::escaperoom::Enigma::getName() const {

@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="hw4project">
-				<Option output="C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/hw4project.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug"/>
+				<Option output="C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/hw4project.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -33,15 +33,15 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 hw4project"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 hw4project"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="hw4project/fast">
-				<Option output="C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/hw4project.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug"/>
+				<Option output="C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/hw4project.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -55,73 +55,73 @@
 					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 hw4project/fast"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 hw4project/fast"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Or/Documents/GitHub/mtmhw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/Enigma.cpp">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/Enigma.cpp">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/Enigma.h">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/Enigma.h">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/EscapeRoom.c">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoom.c">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/EscapeRoom.h">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoom.h">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/EscapeRoomWrapper.cpp">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoomWrapper.cpp">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/EscapeRoomWrapper.h">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoomWrapper.h">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/Node.h">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/Node.h">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/list.h">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/list.h">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/main.cpp">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/main.cpp">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/mtmtest.h">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/mtmtest.h">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/tests/Enigma_test.cpp">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/tests/Enigma_test.cpp">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/tests/EscapeRoomWrapper_test.cpp">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/tests/EscapeRoomWrapper_test.cpp">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/tests/list_test.cpp">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/tests/list_test.cpp">
 			<Option target="hw4project"/>
 		</Unit>
-		<Unit filename="C:/Users/Or/Documents/GitHub/mtmhw4project/CMakeLists.txt">
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
