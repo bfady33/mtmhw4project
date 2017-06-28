@@ -15,6 +15,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Fady/OneDrive/HW4/hw4project/Enigma.cpp" "C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/CMakeFiles/hw4project.dir/Enigma.cpp.obj"
   "C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoomWrapper.cpp" "C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj"
+  "C:/Users/Fady/OneDrive/HW4/hw4project/KidsRoom.cpp" "C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/CMakeFiles/hw4project.dir/KidsRoom.cpp.obj"
   "C:/Users/Fady/OneDrive/HW4/hw4project/ScaryRoom.cpp" "C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/CMakeFiles/hw4project.dir/ScaryRoom.cpp.obj"
   "C:/Users/Fady/OneDrive/HW4/hw4project/main.cpp" "C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/CMakeFiles/hw4project.dir/main.cpp.obj"
   "C:/Users/Fady/OneDrive/HW4/hw4project/tests/Enigma_test.cpp" "C:/Users/Fady/OneDrive/HW4/hw4project/cmake-build-debug/CMakeFiles/hw4project.dir/tests/Enigma_test.cpp.obj"

@@ -69,11 +69,11 @@ class List<T>::Iterator {
     //should not get the first node of the list.
     Iterator previous() const;
 
+    void swap(Iterator &it);
     //swap the data held by the iterators.
-    friend void swap(Iterator &i, Iterator &j);
+    //friend void swap(List<T>::Iterator &i, List<T>::Iterator &j);
 
 public:
-
     Iterator(const Iterator& iterator) = default;
     Iterator& operator=(const Iterator&) = default;
 
@@ -218,7 +218,7 @@ void List<T>::sort(const Compare& compare) {
     for(List<T>::Iterator i = this->end(); i != begin(); i--) {
         for(List<T>::Iterator j = this->begin(); j != i.previous(); j++) {
             if(!compare(*j, j.node->getNext()->setData())) {
-                swap(i, j);
+                i.swap(j);
             }
         }
     }
@@ -248,12 +248,20 @@ typename List<T>::Iterator List<T>::Iterator::previous() const {
 
 
 //swap the data held by the iterators.
+//template <class L>
+//void swap(List<L>::Iterator &i, List<L>::Iterator &j){
+ //   assert(i.list == j.list);
+  //  L temp = *i;
+//    i.node->setData(*j);
+//    j.node->setData(temp);
+//}
+
 template <class T>
-void swap(List<T>::Iterator &i, List<T>::Iterator &j){
-    assert(i.list == j.list);
-    T temp = *i;
-    i.node->setData(*j);
-    j.node->setData(temp);
+void List<T>::Iterator::swap(Iterator &it){
+    assert(this->list == it.list);
+    T temp = *(*this);
+    this->node->setData(*it);
+    it.node->setData(temp);
 }
 
 template <class T>

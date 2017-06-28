@@ -60,7 +60,7 @@ void mtm::escaperoom::Enigma::removeElement(const string& element){
     }
     if(this->elements.find(element) == this->elements.end())
     {
-        mtm::escaperoom::EnigmaElementNotFundException exc;
+        mtm::escaperoom::EnigmaElementNotFoundException exc;
         throw exc;
     }
     this->elements.erase(element);

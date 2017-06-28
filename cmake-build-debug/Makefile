@@ -203,6 +203,33 @@ EscapeRoomWrapper.cpp.s:
 	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.s
 .PHONY : EscapeRoomWrapper.cpp.s
 
+KidsRoom.obj: KidsRoom.cpp.obj
+
+.PHONY : KidsRoom.obj
+
+# target to build an object file
+KidsRoom.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/KidsRoom.cpp.obj
+.PHONY : KidsRoom.cpp.obj
+
+KidsRoom.i: KidsRoom.cpp.i
+
+.PHONY : KidsRoom.i
+
+# target to preprocess a source file
+KidsRoom.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/KidsRoom.cpp.i
+.PHONY : KidsRoom.cpp.i
+
+KidsRoom.s: KidsRoom.cpp.s
+
+.PHONY : KidsRoom.s
+
+# target to generate assembly for a file
+KidsRoom.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/KidsRoom.cpp.s
+.PHONY : KidsRoom.cpp.s
+
 ScaryRoom.obj: ScaryRoom.cpp.obj
 
 .PHONY : ScaryRoom.obj
@@ -356,6 +383,9 @@ help:
 	@echo ... EscapeRoomWrapper.obj
 	@echo ... EscapeRoomWrapper.i
 	@echo ... EscapeRoomWrapper.s
+	@echo ... KidsRoom.obj
+	@echo ... KidsRoom.i
+	@echo ... KidsRoom.s
 	@echo ... ScaryRoom.obj
 	@echo ... ScaryRoom.i
 	@echo ... ScaryRoom.s

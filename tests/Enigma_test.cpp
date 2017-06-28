@@ -81,5 +81,5 @@ void Etest3(){
     ASSERT_EQUALS(mtm::escaperoom::MEDIUM_ENIGMA, enigma1.getDifficulty());
     enigma1.addElement("additional tool");
     enigma1.removeElement("additional tool");
-    ASSERT_THROWS(mtm::escaperoom::EnigmaElementNotFundException , enigma1.removeElement("blabla"));
+    ASSERT_THROWS(mtm::escaperoom::EnigmaElementNotFoundException , enigma1.removeElement("blabla"));
 }
