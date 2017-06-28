@@ -23,25 +23,34 @@ using namespace mtm;
 
 template <class T>
 class List {
-
-    Node<T>* first;
-
 public:
 
     List();
-    List(const List&);
+    //List(const List&);
     ~List();
-    //void sort(const Compare& compare);
+    //List operator=(const List& list);
     int getSize() const;
     bool operator==(const List<T>& list) const;
     bool operator!=(const List<T>& list) const;
 
     class Iterator;
+
     Iterator begin() const;
     Iterator end() const;
-    void insert(const T& data, Iterator iterator = end());
+
+    void insert(const T& data, Iterator iterator);
+    void insert(const T& data);
     void remove(Iterator iterator);
-    //Iterator find(const Predicate& predicate) const;
+
+    template <class Predicate>
+    List<T>::Iterator find(const Predicate& predicate) const;
+
+    template <class Compare>
+    void sort(const Compare& compare);
+
+private:
+
+    Node<T>* first;
 
 };
 
@@ -60,6 +69,9 @@ class List<T>::Iterator {
     //should not get the first node of the list.
     Iterator previous() const;
 
+    //swap the data held by the iterators.
+    friend void swap(Iterator &i, Iterator &j);
+
 public:
 
     Iterator(const Iterator& iterator) = default;
@@ -75,79 +87,13 @@ public:
 
 };
 
-/*~~~~~~~~~~~~~~~~~List's Iterator Implementation~~~~~~~~~~~~~~~~~*/
 
-template <class T>
-List<T>::Iterator::Iterator(const List<T>* list, Node<T>* node) :
-        list(list), node(node) {
-}
-
-template <class T>
-typename List<T>::Iterator List<T>::Iterator::previous() const {
-    //going over each of this's list's nodes.
-    for(Iterator i = this->list->begin(); i != this->list->end(); i++) {
-        if(i.node->getNext() == this->node) {
-            return i;
-        }
-    }
-
-    //should not get here.
-    assert(false);
-}
-
-template <class T>
-const T& List<T>::Iterator::operator*() const {
-    if(this->node == nullptr) {
-        throw ListExceptions::ElementNotFound();
-    }
-    return this->node->getData();
-}
-
-template <class T>
-typename List<T>::Iterator& List<T>::Iterator::operator++() {
-    if(node != nullptr) {
-        node = node->getNext();
-    }
-    return *this;
-}
-
-template <class T>
-typename List<T>::Iterator List<T>::Iterator::operator++(int) {
-    Iterator temp = *this;
-    (*this)++;
-    return temp;
-}
-
-template <class T>
-typename List<T>::Iterator& List<T>::Iterator::operator--() {
-    if(this->list->first != this->node) {
-        *this = this->previous();
-    }
-    return *this;
-}
-
-template <class T>
-typename List<T>::Iterator List<T>::Iterator::operator--(int) {
-    Iterator temp = *this;
-    (*this)--;
-    return temp;
-}
-
-template <class T>
-bool List<T>::Iterator::operator==(const Iterator& iterator) const {
-    return (this->list == iterator.list) && (this->node == iterator.node);
-}
-
-template <class T>
-bool List<T>::Iterator::operator!=(const Iterator& iterator) const {
-    return !((*this) == iterator);
-}
 
 /*~~~~~~~~~~~~~~~~~List Implementation~~~~~~~~~~~~~~~~~*/
 
 template <class T>
 List<T>::List() :
-    first(nullptr) {
+        first(nullptr) {
 }
 
 template <class T>
@@ -161,7 +107,7 @@ typename List<T>::Iterator List<T>::end() const {
 }
 
 template <class T>
-void List<T>::insert(const T &data, List<T>::Iterator iterator) {
+void List<T>::insert(const T &data, Iterator iterator) {
     if(iterator.list != this) {
         throw ListExceptions::ElementNotFound();
     }
@@ -181,12 +127,19 @@ void List<T>::insert(const T &data, List<T>::Iterator iterator) {
 }
 
 template <class T>
+void List<T>::insert(const T& data){
+    this->insert(data , this->end());
+}
+
+template <class T>
 void List<T>::remove(Iterator iterator) {
     if(iterator.list != this) {
-        throw ListExceptions::ElementNotFound();
+        ListExceptions::ElementNotFound exc;
+        throw exc;
     }
     if(iterator == this->end()) {
-        throw ListExceptions::ElementNotFound();
+        ListExceptions::ElementNotFound exc;
+        throw exc;
     }
     //to remove the first node:
     if(iterator == this->begin()) {
@@ -242,13 +195,116 @@ bool List<T>::operator!=(const List<T> &list) const {
 template <class T>
 List<T>::~List() {
     //deleting every node in this except for first.
-    for(Iterator i = this->end(); i != this->begin(); i--) {
-        delete (--i).node->getNext();
-    }
-    //in the case of an empty list, doesn't delete anything.
-    if(this->first != nullptr) {
-        delete this->first;
+    for(Iterator i = this->begin(); i != this->end(); ) {
+        delete (i++).node;
     }
 }
+
+template <class T>
+template <class Predicate>
+typename List<T>::Iterator List<T>::find(const Predicate& predicate) const {
+    for(List<T>::Iterator i = this->begin(); i != this->end(); i++) {
+        if(predicate(*i)) {
+            return i;
+        }
+    }
+    return this->end();
+}
+
+template <class T>
+template <class Compare>
+void List<T>::sort(const Compare& compare) {
+    //a simple bubble sort:
+    for(List<T>::Iterator i = this->end(); i != begin(); i--) {
+        for(List<T>::Iterator j = this->begin(); j != i.previous(); j++) {
+            if(!compare(*j, j.node->getNext()->setData())) {
+                swap(i, j);
+            }
+        }
+    }
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~List's Iterator Implementation~~~~~~~~~~~~~~~~~*/
+
+template <class T>
+List<T>::Iterator::Iterator(const List<T>* list, Node<T>* node) :
+        list(list), node(node) {
+}
+
+template <class T>
+typename List<T>::Iterator List<T>::Iterator::previous() const {
+    //going over each of this's list's nodes.
+    for(Iterator i = this->list->begin(); i != this->list->end(); i++) {
+        if(i.node->getNext() == this->node) {
+            return i;
+        }
+    }
+
+    //should not get here.
+    assert(false);
+}
+
+
+//swap the data held by the iterators.
+template <class T>
+void swap(List<T>::Iterator &i, List<T>::Iterator &j){
+    assert(i.list == j.list);
+    T temp = *i;
+    i.node->setData(*j);
+    j.node->setData(temp);
+}
+
+template <class T>
+const T& List<T>::Iterator::operator*() const {
+    if(this->node == nullptr) {
+        throw ListExceptions::ElementNotFound();
+    }
+    return this->node->getData();
+}
+
+template <class T>
+typename List<T>::Iterator& List<T>::Iterator::operator++() {
+    Iterator returnval = *this;
+    if(node != nullptr) {
+        node = node->getNext();
+    }
+    return *this;
+}
+
+template <class T>
+typename List<T>::Iterator List<T>::Iterator::operator++(int) {
+    Iterator temp = *this;
+    ++(*this);
+    return temp;
+}
+
+template <class T>
+typename List<T>::Iterator& List<T>::Iterator::operator--(){
+    if(this->list->first != this->node) {
+        *this = this->previous();
+    }
+    return *this;
+}
+
+template <class T>
+typename List<T>::Iterator List<T>::Iterator::operator--(int) {
+    Iterator temp = *this;
+    --(*this);
+    return temp;
+}
+
+template <class T>
+bool List<T>::Iterator::operator==(const Iterator& iterator) const {
+    return (this->list == iterator.list) && (this->node == iterator.node);
+}
+
+template <class T>
+bool List<T>::Iterator::operator!=(const Iterator& iterator) const {
+    return !((*this) == iterator);
+}
+
+
 
 #endif //HW4PROJECT_LIST_H

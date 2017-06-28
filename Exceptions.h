@@ -3,7 +3,6 @@
 
 #include <stdexcept>
 
-//Exceptions
 namespace mtm {
 
     class MtmException {};
@@ -25,7 +24,7 @@ namespace mtm {
         class EnigmaException : public MtmException {};
         class EnigmaIllegalSizeParamException : public EnigmaException{};
         class EnigmaNoElementsException : public EnigmaException{};
-        class EnigmaElementNotFundException : public EnigmaException{};
+        class EnigmaElementNotFoundException : public EnigmaException{};
 
         class CompanyException : public MtmException {};
         class CompanyRoomNotFoundException : public CompanyException{};

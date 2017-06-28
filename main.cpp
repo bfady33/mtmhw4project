@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main() {
+/*int main() {
     std::cout << "Hello, running tests!" << std::endl;
     std::cout << "running escaperoomwrapper test:" << std::endl;
 
@@ -8,4 +8,4 @@ int main() {
 
     std::cout << "finished testing successfuly" << std::endl;
     return 0;
-}
+}*/
