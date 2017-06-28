@@ -28,6 +28,6 @@ int mtm::escaperoom::ScaryRoom::getAgeLimit(){
 
 void mtm::escaperoom::ScaryRoom::print(std::ostream &output) {
     output << "Scary Room: " << roomGetName(room) << "(" << roomGetMaxTime(room) << "/" << getLevel(room) << "/" <<
-           roomGetMaxParticipants(room) << ")";
+           roomGetMaxParticipants(room) << "/" << minAge <<")";
 }
 
