@@ -65,7 +65,7 @@ CMAKE_BINARY_DIR = C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug
 CMakeFiles/hw4project.dir/all:
 	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/depend
 	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target hw4project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target hw4project"
 .PHONY : CMakeFiles/hw4project.dir/all
 
 # Include target in all.
@@ -75,7 +75,7 @@ all: CMakeFiles/hw4project.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hw4project.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles 9
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/hw4project.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/hw4project.dir/rule

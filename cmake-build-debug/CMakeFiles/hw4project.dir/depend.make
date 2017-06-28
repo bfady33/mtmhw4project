@@ -14,6 +14,12 @@ CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../EscapeRoomWrapper.cpp
 CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../EscapeRoomWrapper.h
 CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.obj: ../Exceptions.h
 
+CMakeFiles/hw4project.dir/ScaryRoom.cpp.obj: ../Enigma.h
+CMakeFiles/hw4project.dir/ScaryRoom.cpp.obj: ../EscapeRoom.h
+CMakeFiles/hw4project.dir/ScaryRoom.cpp.obj: ../EscapeRoomWrapper.h
+CMakeFiles/hw4project.dir/ScaryRoom.cpp.obj: ../ScaryRoom.cpp
+CMakeFiles/hw4project.dir/ScaryRoom.cpp.obj: ../ScaryRoom.h
+
 CMakeFiles/hw4project.dir/main.cpp.obj: ../main.cpp
 
 CMakeFiles/hw4project.dir/tests/Enigma_test.cpp.obj: ../Enigma.h

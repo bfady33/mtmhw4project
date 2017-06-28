@@ -102,7 +102,7 @@ void mtm::escaperoom::EscapeRoomWrapper::removeEnigma(const Enigma& enigma){
     }
 
     for(int i = 0 ; i < this->enigmas.size() ; i++){
-        if(this->enigmas[i].getName() == enigma.getName()){
+        if(this->enigmas[i] == enigma){
             this->enigmas.erase(this->enigmas.begin() + i);
             return;
         }
@@ -133,9 +133,13 @@ std::vector<mtm::escaperoom::Enigma>& mtm::escaperoom::EscapeRoomWrapper::getAll
 namespace mtm {
     namespace escaperoom{
     std::ostream &operator<<(std::ostream &output, const mtm::escaperoom::EscapeRoomWrapper &room) {
-        output << room.getName() << "(" << room.getMaxTime() << "/" << room.level() << "/" <<
-               room.getMaxParticipants() << ")";
+        print(output);
         return output;
     }
 }
+}
+
+void mtm::escaperoom::EscapeRoomWrapper::print(std::ostream &output) {
+    output << roomGetName(room) << "(" << roomGetMaxTime(room) << "/" << getLevel(room) << "/" <<
+    roomGetMaxParticipants(room) << ")";
 }

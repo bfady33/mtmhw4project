@@ -11,11 +11,11 @@ namespace mtm{
 namespace escaperoom {
 
     class EscapeRoomWrapper{
-    private:
+    protected:
         //add a room
         EscapeRoom  room;
-
         std::vector<Enigma> enigmas;
+        virtual void print(std::ostream& output);
     public:
         // Constructs a new Escape Room with the specified data.
         //
@@ -71,6 +71,10 @@ namespace escaperoom {
         // Destructor for EscapeRoomWrapper
         ~EscapeRoomWrapper();
 
+
+        //protected and we have to create a virtual func of print :)
+        //
+        //
         // Prints the data of the Room in the following format:
         //
         //     "<name> (<maxTime>/<level>/<maxParticipants>)"

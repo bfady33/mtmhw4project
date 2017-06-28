@@ -103,6 +103,12 @@
 		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/Node.h">
 			<Option target="hw4project"/>
 		</Unit>
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/ScaryRoom.cpp">
+			<Option target="hw4project"/>
+		</Unit>
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/ScaryRoom.h">
+			<Option target="hw4project"/>
+		</Unit>
 		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/list.h">
 			<Option target="hw4project"/>
 		</Unit>
