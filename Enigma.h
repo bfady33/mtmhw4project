@@ -20,8 +20,8 @@ namespace escaperoom{
 
         string name;
         Difficulty difficulty;
-        unsigned int num_of_elements;
-
+        int num_of_elements;
+        set<string> elements;
     public:
 
         // Constructs a new Enigma with the specified data.
@@ -29,7 +29,15 @@ namespace escaperoom{
         // @param name : the name of the enigma.
         // @param difficulty : the difficulty of the enigma.
         // @param numOfElements : the number of elements in the enigma.
-        Enigma(const std::string& name, const Difficulty& difficulty, const int& numOfElements);
+        // @param elements : the set of strings in the enigma.
+        Enigma(const std::string& name, const Difficulty& difficulty, const int& numOfElements ,
+               const set<string> &elements);
+
+        // Constructs a new Enigma with the specified data.
+        //
+        // @param name : the name of the enigma.
+        // @param difficulty : the difficulty of the enigma.
+        Enigma(const std::string& name, const Difficulty& difficulty);
 
         //copy constructor
         //
@@ -62,6 +70,12 @@ namespace escaperoom{
         // return the difficulty level of the enigma.
         //
         Difficulty getDifficulty() const;
+
+        //adds the element element to the set of elements in the enigma
+        void addElement(const string& element);
+
+        //removes element for the set elements if it exists
+        void removeElement(const string& element);
 
         // Prints the data of the Enigma in the following format:
         //

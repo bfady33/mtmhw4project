@@ -3,16 +3,19 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 #include "EscapeRoom.h"
-
+#include "Enigma.h"
 
 namespace mtm{
 namespace escaperoom {
 
     class EscapeRoomWrapper{
-    private:
+    protected:
         //add a room
         EscapeRoom  room;
+        std::vector<Enigma> enigmas;
+        virtual void print(std::ostream& output);
     public:
         // Constructs a new Escape Room with the specified data.
         //
@@ -68,6 +71,10 @@ namespace escaperoom {
         // Destructor for EscapeRoomWrapper
         ~EscapeRoomWrapper();
 
+
+        //protected and we have to create a virtual func of print :)
+        //
+        //
         // Prints the data of the Room in the following format:
         //
         //     "<name> (<maxTime>/<level>/<maxParticipants>)"
@@ -94,6 +101,17 @@ namespace escaperoom {
         //
         int getMaxParticipants() const;
 
+        //adds enigma to the end of the enigmas list
+        void addEnigma(const Enigma& enigma);
+
+        //removes the from the list enigmas the value enigma
+        void removeEnigma(const Enigma& enigma);
+
+        //returns the hardest Enigma in Enigmas
+        Enigma getHardestEnigma();
+
+        //returns the vector of all Enigmas in the room
+        std::vector<Enigma>& getAllEnigmas();
     };
 
     std::ostream& operator<<(std::ostream& output, const EscapeRoomWrapper& room);

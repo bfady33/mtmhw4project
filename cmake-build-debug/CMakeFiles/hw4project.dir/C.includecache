@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Or/Documents/GitHub/mtmhw4project/EscapeRoom.c
+C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoom.c
 EscapeRoom.h
-C:/Users/Or/Documents/GitHub/mtmhw4project/EscapeRoom.h
+C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoom.h
 stdlib.h
 -
 string.h
 -
 
-C:/Users/Or/Documents/GitHub/mtmhw4project/EscapeRoom.h
+C:/Users/Fady/OneDrive/HW4/hw4project/EscapeRoom.h
 stdbool.h
 -
 

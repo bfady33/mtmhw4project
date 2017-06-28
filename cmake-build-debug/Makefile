@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Or\Documents\GitHub\mtmhw4project
+CMAKE_SOURCE_DIR = C:\Users\Fady\OneDrive\HW4\hw4project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug\CMakeFiles C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -202,6 +202,33 @@ EscapeRoomWrapper.s: EscapeRoomWrapper.cpp.s
 EscapeRoomWrapper.cpp.s:
 	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/EscapeRoomWrapper.cpp.s
 .PHONY : EscapeRoomWrapper.cpp.s
+
+ScaryRoom.obj: ScaryRoom.cpp.obj
+
+.PHONY : ScaryRoom.obj
+
+# target to build an object file
+ScaryRoom.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/ScaryRoom.cpp.obj
+.PHONY : ScaryRoom.cpp.obj
+
+ScaryRoom.i: ScaryRoom.cpp.i
+
+.PHONY : ScaryRoom.i
+
+# target to preprocess a source file
+ScaryRoom.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/ScaryRoom.cpp.i
+.PHONY : ScaryRoom.cpp.i
+
+ScaryRoom.s: ScaryRoom.cpp.s
+
+.PHONY : ScaryRoom.s
+
+# target to generate assembly for a file
+ScaryRoom.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/ScaryRoom.cpp.s
+.PHONY : ScaryRoom.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -329,6 +356,9 @@ help:
 	@echo ... EscapeRoomWrapper.obj
 	@echo ... EscapeRoomWrapper.i
 	@echo ... EscapeRoomWrapper.s
+	@echo ... ScaryRoom.obj
+	@echo ... ScaryRoom.i
+	@echo ... ScaryRoom.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
