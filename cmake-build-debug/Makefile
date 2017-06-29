@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.1.3\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Fady\OneDrive\HW4\hw4project
+CMAKE_SOURCE_DIR = C:\Users\Or\Documents\GitHub\mtmhw4project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug\CMakeFiles C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fady\OneDrive\HW4\hw4project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Or\Documents\GitHub\mtmhw4project\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -365,6 +365,33 @@ tests/list_test.cpp.s:
 	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/tests/list_test.cpp.s
 .PHONY : tests/list_test.cpp.s
 
+tests/list_test_out.obj: tests/list_test_out.cpp.obj
+
+.PHONY : tests/list_test_out.obj
+
+# target to build an object file
+tests/list_test_out.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/tests/list_test_out.cpp.obj
+.PHONY : tests/list_test_out.cpp.obj
+
+tests/list_test_out.i: tests/list_test_out.cpp.i
+
+.PHONY : tests/list_test_out.i
+
+# target to preprocess a source file
+tests/list_test_out.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/tests/list_test_out.cpp.i
+.PHONY : tests/list_test_out.cpp.i
+
+tests/list_test_out.s: tests/list_test_out.cpp.s
+
+.PHONY : tests/list_test_out.s
+
+# target to generate assembly for a file
+tests/list_test_out.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/tests/list_test_out.cpp.s
+.PHONY : tests/list_test_out.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -401,6 +428,9 @@ help:
 	@echo ... tests/list_test.obj
 	@echo ... tests/list_test.i
 	@echo ... tests/list_test.s
+	@echo ... tests/list_test_out.obj
+	@echo ... tests/list_test_out.i
+	@echo ... tests/list_test_out.s
 .PHONY : help
 
 

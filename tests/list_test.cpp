@@ -3,8 +3,8 @@
 //
 
 #include "../list.h"
-#include "../mtmtest.h"
-#include <iostream>
+#include "mtmtest.h"
+#include <string>
 
 using namespace mtm::ListExceptions;
 
@@ -12,14 +12,17 @@ void list_test1();
 void list_test2();
 void list_test3();
 void list_test4();
+void list_test5();
 
 bool isNegative(int num);
+bool isBigger(std::string str1, std::string str2);
 
-int main() {
+int listTest() {
     RUN_TEST(list_test1);
     RUN_TEST(list_test2);
     RUN_TEST(list_test3);
     RUN_TEST(list_test4);
+    RUN_TEST(list_test5);
 }
 
 void list_test1() { //test empty list insert-remove.
@@ -145,6 +148,31 @@ void list_test4() { //test find.
     ASSERT_EQUALS(-17, *list6.find(*isNegative));
 }
 
+void list_test5() {
+    List<std::string> list;
+
+    list.insert("cccc");
+    list.insert("aaaa");
+    list.insert("bbbb");
+    list.insert("abbb");
+    list.insert("abcd");
+    list.insert("abbb");
+
+    list.sort(*isBigger);
+
+    List<std::string>::Iterator iter = list.begin();
+    ASSERT_EQUALS("aaaa", *(iter++));
+    ASSERT_EQUALS("abbb", *(iter++));
+    ASSERT_EQUALS("abbb", *(iter++));
+    ASSERT_EQUALS("abcd", *(iter++));
+    ASSERT_EQUALS("bbbb", *(iter++));
+    ASSERT_EQUALS("cccc", *(iter++));
+}
+
 bool isNegative(int num) {
     return num < 0;
+}
+
+bool isBigger(std::string str1, std::string str2) {
+    return str1.compare(str2) < 0;
 }

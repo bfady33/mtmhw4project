@@ -5,9 +5,6 @@
 /*
  * TODO:    List's Copy-Constructor.
  * TODO:    List's = operator.
- * TODO:    List::sort.
- * TODO:    List::find.
- * TODO:    List_test.cpp
  */
 
 #ifndef HW4PROJECT_LIST_H
@@ -26,9 +23,10 @@ class List {
 public:
 
     List();
-    //List(const List&);
+    List(const List&);
+    List& operator=(const List& list);
     ~List();
-    //List operator=(const List& list);
+
     int getSize() const;
     bool operator==(const List<T>& list) const;
     bool operator!=(const List<T>& list) const;
@@ -69,9 +67,8 @@ class List<T>::Iterator {
     //should not get the first node of the list.
     Iterator previous() const;
 
-    void swap(Iterator &it);
     //swap the data held by the iterators.
-    //friend void swap(List<T>::Iterator &i, List<T>::Iterator &j);
+    void swap(Iterator &it);
 
 public:
     Iterator(const Iterator& iterator) = default;
@@ -94,6 +91,26 @@ public:
 template <class T>
 List<T>::List() :
         first(nullptr) {
+}
+
+template <class T>
+List<T>::List(const List& list) :
+        first(nullptr) {
+    for(Iterator i = list.begin(); i != list.end(); i++) {
+        this->insert(*i);
+    }
+}
+
+template <class T>
+List<T>& List<T>::operator=(const List& list) {
+    int size = this->getSize();
+    for(int i = 0; i < size; i++) {
+        this->remove(this->begin());
+    }
+    for(Iterator i = list.begin(); i != list.end(); i++) {
+        this->insert(*i);
+    }
+    return *this;
 }
 
 template <class T>
@@ -194,9 +211,9 @@ bool List<T>::operator!=(const List<T> &list) const {
 
 template <class T>
 List<T>::~List() {
-    //deleting every node in this except for first.
-    for(Iterator i = this->begin(); i != this->end(); ) {
-        delete (i++).node;
+    int size = this->getSize();
+    for(int i = 0; i < size; i++) {
+        this->remove(this->begin());
     }
 }
 
@@ -217,8 +234,10 @@ void List<T>::sort(const Compare& compare) {
     //a simple bubble sort:
     for(List<T>::Iterator i = this->end(); i != begin(); i--) {
         for(List<T>::Iterator j = this->begin(); j != i.previous(); j++) {
-            if(!compare(*j, j.node->getNext()->setData())) {
-                i.swap(j);
+            Iterator next = j;
+            next++;
+            if(!compare(*j, *next)) {
+                j.swap(next);
             }
         }
     }

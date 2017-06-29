@@ -3,7 +3,7 @@
 //
 
 #include "../Enigma.h"
-#include "../mtmtest.h"
+#include "mtmtest.h"
 #include "string"
 #include "../Exceptions.h"
 
