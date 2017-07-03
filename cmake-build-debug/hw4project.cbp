@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/Company.cpp">
+			<Option target="hw4project"/>
+		</Unit>
+		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/Company.h">
+			<Option target="hw4project"/>
+		</Unit>
 		<Unit filename="C:/Users/Fady/OneDrive/HW4/hw4project/Enigma.cpp">
 			<Option target="hw4project"/>
 		</Unit>

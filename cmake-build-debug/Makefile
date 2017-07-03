@@ -122,6 +122,33 @@ hw4project/fast:
 	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/build
 .PHONY : hw4project/fast
 
+Company.obj: Company.cpp.obj
+
+.PHONY : Company.obj
+
+# target to build an object file
+Company.cpp.obj:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/Company.cpp.obj
+.PHONY : Company.cpp.obj
+
+Company.i: Company.cpp.i
+
+.PHONY : Company.i
+
+# target to preprocess a source file
+Company.cpp.i:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/Company.cpp.i
+.PHONY : Company.cpp.i
+
+Company.s: Company.cpp.s
+
+.PHONY : Company.s
+
+# target to generate assembly for a file
+Company.cpp.s:
+	$(MAKE) -f CMakeFiles\hw4project.dir\build.make CMakeFiles/hw4project.dir/Company.cpp.s
+.PHONY : Company.cpp.s
+
 Enigma.obj: Enigma.cpp.obj
 
 .PHONY : Enigma.obj
@@ -374,6 +401,9 @@ help:
 	@echo ... hw4project
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Company.obj
+	@echo ... Company.i
+	@echo ... Company.s
 	@echo ... Enigma.obj
 	@echo ... Enigma.i
 	@echo ... Enigma.s

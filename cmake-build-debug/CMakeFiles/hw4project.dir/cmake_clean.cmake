@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/hw4project.dir/tests/list_test.cpp.obj"
   "CMakeFiles/hw4project.dir/ScaryRoom.cpp.obj"
   "CMakeFiles/hw4project.dir/KidsRoom.cpp.obj"
+  "CMakeFiles/hw4project.dir/Company.cpp.obj"
   "hw4project.pdb"
   "hw4project.exe"
   "hw4project.exe.manifest"
