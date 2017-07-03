@@ -3,7 +3,7 @@
 //
 #include <iostream>
 #include "../EscapeRoomWrapper.h"
-#include "../mtmtest.h"
+#include "mtmtest.h"
 
 using mtm::escaperoom::EscapeRoomWrapper;
 

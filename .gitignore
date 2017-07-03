@@ -1,0 +1,8 @@
+
+*.txt
+*.exe
+cmake-build-debug/Makefile
+*.obj
+*.make
+*.internal
+*.includecache

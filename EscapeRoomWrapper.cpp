@@ -133,7 +133,7 @@ std::vector<mtm::escaperoom::Enigma>& mtm::escaperoom::EscapeRoomWrapper::getAll
 namespace mtm {
     namespace escaperoom{
     std::ostream &operator<<(std::ostream &output, const mtm::escaperoom::EscapeRoomWrapper &room) {
-        print(output);
+     //   print(output);
         return output;
     }
 }
